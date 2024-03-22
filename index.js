@@ -31,7 +31,7 @@ connectDB()
     });
     const io = require("./socket-io").init(server, {
       cors: {
-        origin: "http://localhost:3000",
+        origin: "https://react-lab23.vercel.app",
       },
     });
     io.once("connection", (socket) => {
