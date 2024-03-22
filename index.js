@@ -4,14 +4,12 @@ const connectDB = require("./database/db");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/post");
 const path = require("path");
-const helmet = require("helmet");
 
 require("dotenv").config();
 
 const app = express();
 
 app.use(cors());
-app.use(helmet());
 
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "images")));
